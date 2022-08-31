@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".locationreminders.savereminder.selectreminderlocation.SelectLocationFragment">
+
+    <data>
+
+        <variable
+            name="onSaveButtonClicked"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.udacity.project4.locationreminders.savereminder.selectreminderlocation.SelectLocationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/select_location_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--TODO: Add the map fragment for the user to select the location-->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:tag="@string/map_fragment" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/save_the_location"
+            android:onClick="@{onSaveButtonClicked}"
+            android:text="@string/save_the_location"
+            android:textColor="@color/design_default_color_on_primary"
+            app:backgroundTint="@color/colorPrimary"
+            app:icon="@drawable/ic_save"
+            app:iconTint="@color/design_default_color_on_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
